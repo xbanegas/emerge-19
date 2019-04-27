@@ -1,19 +1,17 @@
-import React, {Component, useEffect, useState} from "react";
+import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import App from "./App";
 import Home from "./Home/Home";
 import Product from "./Product/Product";
 import Profile from "./Profile/Profile";
-import Search from "./Search/Search"
+import Search from "./Search/Search";
 
-import MyProvider, { MyConsumer } from "./MyProvider";
-import { init } from "events";
+import MyProvider from "./MyProvider";
 
-class Router extends Component  {
-  render () {
+class Router extends Component {
+  render() {
     return (
-    <BrowserRouter>
+      <BrowserRouter>
         <MyProvider>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -23,8 +21,9 @@ class Router extends Component  {
             <Route exact path="/Search" component={Search} />
           </Switch>{" "}
         </MyProvider>
-    </BrowserRouter>)
-  };
-};
+      </BrowserRouter>
+    );
+  }
+}
 
 export default Router;

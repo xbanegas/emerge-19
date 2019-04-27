@@ -1,0 +1,11 @@
+.cover {
+  width: 1440px;
+  height: 764px;
+}
+
+.homeimage {
+  width: 1440px;
+  height: 764px;
+  object-fit: contain;
+
+}
