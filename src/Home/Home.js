@@ -6,12 +6,8 @@ const Home = () => {
 
   return (
     <div>
-      <div>
-        <div className={styles.homeimage}>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/emerge-19.appspot.com/o/assets%2Fhomeimage.jpg?alt=media&token=01ba96cd-0118-452c-b898-85e092e44978"
-            className={styles.homeimage}
-          />
+      <div className={styles.cover}>
+        <div className={styles.navbar}>
           <div>a</div>
           <div>a</div>
           <div>a</div>
@@ -20,10 +16,16 @@ const Home = () => {
           <div>a</div>
         </div>
         <div>
-          <div>
+          <div className={styles.Rectangleholder}>
             search
-            <div>1</div>
-            <div>1</div>
+            <div className={styles.Rectangle2}>1</div>
+            <div className={styles.centerholder}>
+              <div className={styles.holder}>
+                <div className={styles.Lets}>LET’S</div>{" "}
+                <div className={styles.eat}>EAT</div>
+              </div>
+              <div className={styles.Lets}>TOGETHER</div>
+            </div>
             <div>
               <div>a</div> <div>b</div>
             </div>

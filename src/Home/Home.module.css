@@ -1,11 +1,63 @@
 .cover {
-  width: 1440px;
+  width: 100vw;
+  height: 764px;
+
+
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/emerge-19.appspot.com/o/assets%2Fhomeimage.jpg?alt=media&token=01ba96cd-0118-452c-b898-85e092e44978);
+  background-size: 100% 764px;
+  background-repeat: no-repeat;
   height: 764px;
 }
 
-.homeimage {
-  width: 1440px;
-  height: 764px;
-  object-fit: contain;
+.Rectangle2 {
+  width: 378px;
+  height: 408px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.Rectangleholder {
+  display: flex;
+  justify-content: center;
+}
+
+.Lets {
+  width: 275px;
+  height: 122px;
+  font-family: Montserrat;
+  font-size: 100px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.eat {
+  width: 199px;
+  height: 122px;
+  font-family: Montserrat;
+  font-size: 100px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.holder {
+  display: flex;
+}
+
+.centerholder {
+
+  margin: auto;
 }
