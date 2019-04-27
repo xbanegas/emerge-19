@@ -8,6 +8,7 @@ export const MyContext = React.createContext();
 class MyProvider extends Component {
   state = {
     user: undefined,
+    pageTitle: "Share a Meal",
   };
 
   render() {
