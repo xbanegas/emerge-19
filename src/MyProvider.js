@@ -8,32 +8,37 @@ export const MyContext = React.createContext();
 class MyProvider extends Component {
   constructor(props){
     super(props);
+
+    this.getFirebase = () => {
+      const firebaseConfig = {
+        apiKey: `${process.env.REACT_APP_FIREBASE_KEY}`,
+        authDomain: "661573101353.firebaseapp.com",
+        databaseURL: "https://emerge-19.firebaseio.com",
+        // projectId: "project-id",
+        // storageBucket: "project-id.appspot.com",
+        // messagingSenderId: "sender-id",
+      };
+      if (!this.state.initialized) {
+        window.firebase.initializeApp(firebaseConfig);
+        this.setState({...this.state, initialized: true});
+        return window.firebase
+      } else {
+        return window.firebase;
+      }
+    }
+
     this.state = {
       user: undefined,
       pageTitle: "Share a Meal",
-      initialized: false
-    };
-  }
-
-  initFirebase () {
-    const firebaseConfig = {
-      apiKey: `${process.env.REACT_APP_FIREBASE_KEY}`,
-      authDomain: "661573101353.firebaseapp.com",
-      databaseURL: "https://emerge-19.firebaseio.com",
-      // projectId: "project-id",
-      // storageBucket: "project-id.appspot.com",
-      // messagingSenderId: "sender-id",
+      initialized: false,
+      firebase: this.getFirebase
     };
 
-    window.firebase.initializeApp(firebaseConfig);
-    return window.firebase.database
   }
+
 
   componentDidMount() {
-    if (!this.state.initialized){
-      this.initFirebase();
-      this.setState({initialized: true});
-    }
+    this.getFirebase();
   }
 
 
